@@ -1,4 +1,5 @@
-var socket = io.connect(window.location.protocol + '//' + document.domain + ':' + location.port, {
+var socket = io.connect(window.location.protocol + '//' + window.location.hostname + ':' + location.port, {
+  // Other options...
     transports: ['websocket']
 });
 socket.on('connect', function () {
